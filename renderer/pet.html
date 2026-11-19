@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: blob:; style-src 'self' 'unsafe-inline'" />
+    <title>Tuxedo Cat Pet</title>
+    <link rel="stylesheet" href="./pet.css" />
+  </head>
+  <body>
+    <div id="stage">
+      <canvas id="pet" width="320" height="320"></canvas>
+    </div>
+    <p id="hint" hidden>网页预览：移动鼠标，猫头会跟着转。桌宠请用 npm start。</p>
+    <script type="module" src="./pet.js"></script>
+  </body>
+</html>

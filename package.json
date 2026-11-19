@@ -1,0 +1,60 @@
+{
+  "name": "desktop-cat-pet",
+  "version": "1.0.0",
+  "description": "Transparent always-on-top tuxedo cat desktop pet",
+  "main": "electron/main.js",
+  "scripts": {
+    "start": "node scripts/start-electron.js",
+    "preview": "npx --yes serve . -p 5173",
+    "calibrate": "node scripts/start-electron.js --calibrate",
+    "postinstall": "node scripts/ensure-electron.js",
+    "process": "python3 scripts/process_assets.py",
+    "rebuild-smooth": "python3 scripts/rebuild_smooth.py",
+    "dist:mac": "electron-builder --mac dmg",
+    "dist:win": "electron-builder --win portable nsis --x64",
+    "pack:win": "node scripts/pack-for-windows.js"
+  },
+  "build": {
+    "appId": "local.desktop.catpet",
+    "productName": "Tuxedo Cat Pet",
+    "files": [
+      "electron/**/*",
+      "renderer/**/*",
+      "package.json",
+      "assets/idle.png",
+      "assets/tray-icon.png",
+      "assets/icon.png",
+      "assets/icon.ico",
+      "assets/angle-anchors.json",
+      "assets/poses/**/*"
+    ],
+    "mac": {
+      "target": ["dmg"],
+      "identity": null,
+      "category": "public.app-category.entertainment",
+      "icon": "assets/icon.png"
+    },
+    "win": {
+      "target": [
+        { "target": "portable", "arch": ["x64"] },
+        { "target": "nsis", "arch": ["x64"] }
+      ],
+      "icon": "assets/icon.ico",
+      "executableName": "TuxedoCatPet",
+      "signAndEditExecutable": false,
+      "artifactName": "${productName}-${version}-win-${arch}.${ext}"
+    },
+    "nsis": {
+      "oneClick": true,
+      "shortcutName": "Tuxedo Cat Pet",
+      "uninstallDisplayName": "Tuxedo Cat Pet"
+    },
+    "directories": {
+      "output": "dist"
+    }
+  },
+  "devDependencies": {
+    "electron": "^33.2.1",
+    "electron-builder": "^25.1.8"
+  }
+}

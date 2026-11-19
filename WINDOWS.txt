@@ -1,0 +1,15 @@
+把本文件夹整个拷到 Windows 电脑（U 盘 / 网盘都可以）。
+
+准备：
+  安装 Node.js LTS（https://nodejs.org），安装时勾选 Add to PATH。
+  不需要 Python，32 张猫图已经打好了。
+
+用法：
+  1. 双击 start-windows.bat
+     第一次会下载依赖，然后直接出现桌宠。
+  2. 双击 build-windows.bat
+     在 dist 文件夹生成 Windows 程序：
+       · 便携版 exe：拷走双击就能用
+       · 安装包：可选
+
+托盘图标可以锁定（鼠标穿透）或退出。

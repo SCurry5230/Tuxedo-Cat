@@ -1,0 +1,147 @@
+{
+  "version": 12,
+  "mode": "sheet",
+  "frameCount": 192,
+  "spritesheet": {
+    "url": "assets/poses/sheet.png",
+    "cols": 16,
+    "rows": 12,
+    "frameWidth": 256,
+    "frameHeight": 256
+  },
+  "idle": "assets/idle.png",
+  "head": {
+    "cx": 0.5,
+    "cy": 0.28,
+    "rx": 0.2,
+    "ry": 0.16
+  },
+  "contactSheet": {
+    "thumb": 64,
+    "labelH": 18,
+    "cols": 16,
+    "rows": 12
+  },
+  "motion": {
+    "follow": 18,
+    "maxDegPerSec": 720
+  },
+  "anchors": [
+    {
+      "frame": 0,
+      "angle": 0.0,
+      "label": "up"
+    },
+    {
+      "frame": 6,
+      "angle": 11.25,
+      "label": "11.25"
+    },
+    {
+      "frame": 12,
+      "angle": 22.5,
+      "label": "22.5"
+    },
+    {
+      "frame": 18,
+      "angle": 33.75,
+      "label": "33.75"
+    },
+    {
+      "frame": 24,
+      "angle": 45.0,
+      "label": "up-right"
+    },
+    {
+      "frame": 36,
+      "angle": 67.5,
+      "label": "67.5"
+    },
+    {
+      "frame": 48,
+      "angle": 90.0,
+      "label": "right"
+    },
+    {
+      "frame": 54,
+      "angle": 101.25,
+      "label": "101.25"
+    },
+    {
+      "frame": 60,
+      "angle": 112.5,
+      "label": "112.5"
+    },
+    {
+      "frame": 72,
+      "angle": 135.0,
+      "label": "down-right"
+    },
+    {
+      "frame": 84,
+      "angle": 157.5,
+      "label": "157.5"
+    },
+    {
+      "frame": 96,
+      "angle": 180.0,
+      "label": "down"
+    },
+    {
+      "frame": 108,
+      "angle": 202.5,
+      "label": "202.5"
+    },
+    {
+      "frame": 120,
+      "angle": 225.0,
+      "label": "down-left"
+    },
+    {
+      "frame": 126,
+      "angle": 236.25,
+      "label": "236.25"
+    },
+    {
+      "frame": 132,
+      "angle": 247.5,
+      "label": "247.5"
+    },
+    {
+      "frame": 138,
+      "angle": 258.75,
+      "label": "258.75"
+    },
+    {
+      "frame": 144,
+      "angle": 270.0,
+      "label": "left"
+    },
+    {
+      "frame": 150,
+      "angle": 281.25,
+      "label": "281.25"
+    },
+    {
+      "frame": 156,
+      "angle": 292.5,
+      "label": "292.5"
+    },
+    {
+      "frame": 162,
+      "angle": 303.75,
+      "label": "303.75"
+    },
+    {
+      "frame": 168,
+      "angle": 315.0,
+      "label": "up-left"
+    },
+    {
+      "frame": 180,
+      "angle": 337.5,
+      "label": "337.5"
+    }
+  ],
+  "notes": "192 zero-crossfade warped frames, body-locked below y=0.48."
+}

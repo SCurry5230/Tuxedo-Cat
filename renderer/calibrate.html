@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <title>方向锚点校准</title>
+    <link rel="stylesheet" href="./calibrate.css" />
+  </head>
+  <body>
+    <header>
+      <h1>ANGLE ANCHORS 校准</h1>
+      <p>
+        角度 0° = 正上，顺时针增大。点击 contact sheet 选帧，再设该帧对应的鼠标方向。不要假设帧均匀铺满 360°。
+      </p>
+    </header>
+    <main>
+      <section class="sheet-wrap">
+        <canvas id="sheet"></canvas>
+      </section>
+      <aside>
+        <div class="live">
+          <canvas id="preview" width="240" height="240"></canvas>
+          <p class="mini">移动鼠标到猫头周围预览连续插值</p>
+        </div>
+        <label>选中帧 <input id="frame" type="number" min="0" step="1" /></label>
+        <label>角度 ° <input id="angle" type="number" min="0" max="359" step="1" /></label>
+        <label>标签 <input id="label" type="text" placeholder="up / right / …" /></label>
+        <div class="row">
+          <button id="add" type="button">写入锚点</button>
+          <button id="del" type="button">删除该帧锚点</button>
+        </div>
+        <h2>Head hit ellipse</h2>
+        <label>cx <input id="cx" type="number" min="0" max="1" step="0.01" /></label>
+        <label>cy <input id="cy" type="number" min="0" max="1" step="0.01" /></label>
+        <label>rx <input id="rx" type="number" min="0.05" max="0.5" step="0.01" /></label>
+        <label>ry <input id="ry" type="number" min="0.05" max="0.5" step="0.01" /></label>
+        <h2>当前锚点</h2>
+        <ol id="list"></ol>
+        <div class="row">
+          <button id="save" type="button" class="primary">保存 angle-anchors.json</button>
+        </div>
+        <p id="status"></p>
+      </aside>
+    </main>
+    <script type="module" src="./calibrate.js"></script>
+  </body>
+</html>
